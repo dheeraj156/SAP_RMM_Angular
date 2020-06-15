@@ -53,14 +53,14 @@
               <label><b>Principal Amortization Code</b></label>
               <select class="custom-select" formControlName="principalAmmortizationCode">
                 <option value="">Choose from the following</option>
-                <option *ngFor="let val of Values | keyvalue" [ngValue]="val.Value">{{val.key}}</option>
+                <option *ngFor="let val of Values | keyvalue" [ngValue]="val.key">{{val.key}}</option>
               </select>
             </div>
             <div class="form-group col-6">
               <label><b>Active Inactive Edit Code</b></label>
               <select class="custom-select" formControlName="activeInactiveEditCode">
                 <option value="">Choose from the following</option>
-                <option *ngFor="let flag of Flags | keyvalue" [ngValue]="flag.Value">{{flag.key}}</option>
+                <option *ngFor="let flag of Flags | keyvalue" [ngValue]="flag.key">{{flag.key}}</option>
               </select>
             </div>
             <div class="form-group col-6">
@@ -77,11 +77,25 @@
             </div>
             <div class="form-group col-6">
               <label><b>Loan Status</b></label>
-              <select class="custom-select" formControlName="activeInactiveEditCode">
+              <select class="custom-select" formControlName="loanStatusCode">
                 <option value="">Choose from the following</option>
-                <option *ngFor="let stat of Status | keyvalue" [ngValue]="stat.Value">{{stat.key}}</option>
+                <option *ngFor="let stat of Status | keyvalue" [ngValue]="stat.key">{{stat.key}}</option>
               </select>
             </div>
+          </div>
+          <div class="card" *ngIf="loanData" >
+              <form [formGroup]="form2">
+              <table class="table table-hover">
+                
+                    <tr>
+                      <td ><b> RMM : {{ loanData. rmm }}  </b></td>
+                        <td >  UPB: {{ loanData. upb }}</td>
+                    </tr>
+                    
+                  
+                  
+                </table>
+                </form>
           </div>
         <div class="card-body">
           <div class="col-12">
@@ -90,33 +104,8 @@
         </div>
     </div> 
   </form>
-   <div class="card" *ngIf="loanData">
-      <form [formGroup]="form2">
-        <div class="card-body">
-          <div class="row">
-        <div class="form-group col-6">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">RMM</th>
-              </tr>
-              <tr>
-                <th scope="col">UPB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{{ loanData. rmm }}</td>
-              </tr>
-              <tr>
-                <td>{{ loanData. upb }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div>
-  </div>
-  </form>
+  
+  
 </div>
 </div>
 </div>

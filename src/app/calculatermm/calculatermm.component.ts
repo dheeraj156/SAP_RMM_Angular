@@ -14,7 +14,7 @@ export class CalculatermmComponent implements OnInit {
   public Values: any = new Map([
     ['1-OLD-75DAY-GURANTOR',1],
     ['2-ACTUAL-PRIN-BALANCE',2],
-    ['1-OLD-75DAY-CASH',3],
+    ['3-OLD-75DAY-CASH',3],
 
   ]);
   public Flags: any = new Map([
@@ -62,9 +62,11 @@ export class CalculatermmComponent implements OnInit {
   }
 
   submit(){
+    console.log(this.form1.value);
     this._rmmubpcal.postMethod(this.form1.value).subscribe(data =>
       {
         this.loanData = data;
+        console.log(this.loanData);
       })
   }
 

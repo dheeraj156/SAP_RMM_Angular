@@ -3,7 +3,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { FormGroup } from '@angular/forms';
 
 
-const URL="/sap/rmmValue";
+const URL="http://localhost:8081/sap/rmmValue";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +12,6 @@ const httpOptions = {
      'Cache-control': 'no-cache',
       'Expires': '0',
       'Pragma': 'no-cache'
-
   })
 };
 
