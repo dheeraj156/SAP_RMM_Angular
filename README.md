@@ -1,3 +1,30 @@
+Steps to run and deploy Angular Application :
+
+Prior to Angular CLI we need to have Nodejs installed in your system . 
+
+Nodejs has to be greater than 8.11 and npm has to be greater than 5.6.
+Check Node version and npm version using npm -v and node -v.
+
+1. Use npm install -g @angular/cli
+2. ng new my-app --> Creates New Angular Application 
+3. Run the application by opening browser: localhost:4200 
+ng serve --open
+4. To Install Bootstrap use  npm install --save bootstrap@3 , AS we have used version 3 in our application.
+5. In angular.json file , copy styles as: 
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ]
+
+Links for Angular  :
+
+https://www.tutorialspoint.com/angular_material7/angular_material7_environment_setup.htm
+
+https://angular.io/guide/setup-local
+
+
+
+
 # SapRmmApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
